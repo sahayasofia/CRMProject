@@ -1,15 +1,11 @@
-package com.faith.service;
+package com.faith.repository;
 
 import java.util.List;
 
-import org.springframework.stereotype.Service;
-
 import com.faith.model.Customer;
 
-@Service
-public interface ICustomerService {
-	
-	
+public interface IRepository {
+
 	
 	//save the customers            CREATE  INSTERT
 	
@@ -30,7 +26,4 @@ public interface ICustomerService {
 	
 	//Delete customers              DELETE  DELETE
 	public void deletecustomer(int theId);
-	
-	
-
 }

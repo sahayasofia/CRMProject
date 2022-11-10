@@ -12,12 +12,11 @@ public class Customer {
 	
 	@Id
 	@GeneratedValue(strategy=GenerationType.IDENTITY)
-	
-	//declard variables
 	private int id;
 	private String firstName;
 	private String lastName;
 	private String email;
+	
 	public Customer() {
 		super();
 		// TODO Auto-generated constructor stub

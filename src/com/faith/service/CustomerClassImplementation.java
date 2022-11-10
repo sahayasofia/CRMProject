@@ -7,21 +7,23 @@ import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
 import com.faith.model.Customer;
-import com.faith.repository.ICustomerDAO;
+
+import com.faith.repository.IRepository;
 
 @Service
 public class CustomerClassImplementation implements ICustomerService {
-	
-	//need to inject customer DAO
+
+	// need to inject customer DAO
 	@Autowired
-	private ICustomerDAO customerDAO;
+	private IRepository customerDAO;
+
 	@Override
-	@Transactional 
+	@Transactional
 	public void saveCustomers(Customer customer) {
-		
 		customerDAO.saveCustomers(customer);
 
 	}
+
 	@Override
 	@Transactional
 	public List<Customer> getCustomers() {
@@ -38,9 +40,9 @@ public class CustomerClassImplementation implements ICustomerService {
 
 	@Override
 	@Transactional
-	public Customer deletecustomer(int theId) {
+	public void deletecustomer(int theId) {
 		// TODO Auto-generated method stub
-		return customerDAO.deletecustomer(theId);
+		customerDAO.getcustomer(theId);
 	}
 
 }

@@ -22,8 +22,8 @@ public class TestDbServlet extends HttpServlet {
 	protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
 		// setup Connection variables
 		String user="root";
-		String password="sofia@31";
-		String jdbcurl="jdbc:mysql://localhost:3306/democrm2022?serverTimezone=UTC";
+		String password="faith";
+		String jdbcurl="jdbc:mysql://localhost:3306/demohybernate?serverTimezone=UTC";
 		String driverclass="com.mysql.cj.jdbc.Driver";
 		
 		//get connection 
